@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 
 //Bootstrap
@@ -9,10 +9,22 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/Home';
+import SecondCounter from './components/SecondCounter'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+const Counter = () => {
+  const [seconds, setSeconds] = useState(0)
+
+  useEffect(() => { 
+      const interval = setInterval(() => {
+        setSeconds((s) => s + 1);
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }, []);
+
+    return <SecondCounter seconds={seconds} />;
+    };
+
+let app = document.getElementById('root')
+
+ReactDOM.createRoot(app).render(<Counter />)
