@@ -11,20 +11,14 @@ import '../styles/index.css'
 // components
 import SecondCounter from './components/SecondCounter'
 
-const Counter = () => {
-  const [seconds, setSeconds] = useState(0)
-
-  useEffect(() => { 
-      const interval = setInterval(() => {
-        setSeconds((s) => s + 1);
-      }, 1000);
-
-      return () => clearInterval(interval);
-    }, []);
-
-    return <SecondCounter seconds={seconds} />;
-    };
-
+let value = 0;
 let app = document.getElementById('root')
 
-ReactDOM.createRoot(app).render(<Counter />)
+function count (){
+  setInterval (() => {
+    value++
+    ReactDOM.createRoot(app).render(<SecondCounter seconds={value} />);
+  }, 1000);
+};
+
+count()

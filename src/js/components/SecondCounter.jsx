@@ -10,7 +10,7 @@ const SecondCounter = ({seconds}) => {
 
 return (
     <div className="d-flex flex-row justify-content-center align-items-center bg-dark text-white gap-2" style={{height:"100vh", fontSize:"2em"}}>
-       <div><i className="far fa-clock d-flex align-items-center justify-content-center rounded-2" style={{fontSize:"3em", backgroundColor:"#383f47", height:"15vh", width:"10vh"}}></i></div>
+       <div><i className="far fa-clock d-flex align-items-center justify-content-center rounded-2" style={{fontSize:"2em", backgroundColor:"#383f47", height:"15vh", width:"10vh"}}></i></div>
        <div className="d-flex align-items-center justify-content-center rounded-2" style={{fontSize:"3em", backgroundColor:"#383f47", height:"15vh", width:"10vh"}}>{six}</div>
        <div className="d-flex align-items-center justify-content-center rounded-2" style={{fontSize:"3em", backgroundColor:"#383f47", height:"15vh", width:"10vh"}}>{five}</div>
        <div className="d-flex align-items-center justify-content-center rounded-2" style={{fontSize:"3em", backgroundColor:"#383f47", height:"15vh", width:"10vh"}}>{four}</div>
